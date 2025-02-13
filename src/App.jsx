@@ -6,7 +6,16 @@ import { IoCalculatorSharp } from "react-icons/io5";
 import { IoLanguage } from "react-icons/io5";
 import { TbCoinPoundFilled } from "react-icons/tb";
 import { useEffect, useState } from "react";
+import notred from "./assets/notred.png";
+import notcoin from "./assets/notcoin.png";
+import teracoin from "./assets/teracoin.png";
+import yellow from "./assets/yellow.png";
+import green from "./assets/green.png";
+import red from "./assets/red.png";
+import verify from "./assets/verify.png";
 import img from "./assets/ppp.jpg";
+import coin from "./assets/coin.png";
+import avatar from "./assets/avatar.png";
 import logo from "./assets/logo.png";
 import blacklogo from "./assets/blacklogo.png";
 import { IoMdShare } from "react-icons/io";
@@ -19,6 +28,7 @@ import { FaArrowLeft } from "react-icons/fa";
 import { MdCable } from "react-icons/md";
 import { IoIosArrowDown } from "react-icons/io";
 import './app.css';
+import { TbLogout } from "react-icons/tb";
 
 
 
@@ -98,7 +108,15 @@ function App() {
               <path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
             </svg>
           </label>
-          <button className="btn btn-ghost ml-[60px] btn-circle">
+
+
+          <div className="dropdown dropdown-end">
+            <div
+              tabIndex={0}
+              role="button"
+              className="  "
+            >
+              <button className="btn btn-ghost ml-[60px] btn-circle">
             <div className="indicator">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -117,6 +135,55 @@ function App() {
             </div>
             
           </button>
+            </div>
+            <ul
+              tabIndex={0}
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-80 p-2 shadow"
+            >
+              <li>
+                <a className="flex items-center gap-5"> 
+                  <p className="relative"> <span>Notification</span> <span className="ml-28">See all</span></p>
+               
+                </a>
+              </li>
+              <hr className="my-1"/>
+              <li>
+                <a className="flex items-center gap-5">
+                  <img className="h-[36px]" src={verify} alt="" />
+                  <p> Task approved by teacher<br/>Write a 500-word essay .</p>
+               
+                </a>
+              </li>
+              <hr className="my-2"/>
+              <li>
+              <a className="flex items-center gap-5 ">
+                  <img className="h-[36px]" src={notred} alt="" />
+                  <p> Task approved by teacher<br/>Write a 500-word essay .</p>
+               
+                </a>
+              </li> 
+              <hr className="my-2"/>
+              <li>
+              <a className="flex items-center gap-5 ">
+                  <img className="h-[36px]" src={notcoin} alt="" />
+                  <p> Olivia got no.1 place this week<br/>Total 34 coins, 95% participation rate</p>
+               
+                </a>
+              </li> 
+              <hr className="my-2"/>
+              <li>
+              <a className="flex items-center gap-5 ">
+                  <img className="h-[36px]" src={notcoin} alt="" />
+                  <p> Olivia got no.1 place this week<br/>Total 34 coins, 95% participation rate</p>
+               
+                </a>
+              </li> 
+            </ul>
+          </div>
+
+
+
+          
           <div className="indicator mx-[10px]">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -131,6 +198,8 @@ function App() {
               d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
           </svg> 
         </div>
+
+
           <div className="dropdown dropdown-end">
             <div
               tabIndex={0}
@@ -141,22 +210,25 @@ function App() {
                 <img
                 className="rounded-full h-full "
                   alt="Profile"
-                  src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                  src={avatar}
                 />
               </div>
                 <IoIosArrowDown size={17}/>
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-1 w-32 p-2 shadow"
             >
               <li>
-                <a className="justify-between">
-                  Profile 
+                <a className="">
+                  <CgProfile/> Profile 
                 </a>
               </li>
               <li>
-                <a>Settings</a>
+                <a><GiRank3/> Rank</a>
+              </li> 
+              <li>
+                <a><TbLogout />                Logout</a>
               </li> 
             </ul>
           </div>
@@ -183,7 +255,7 @@ function App() {
       {/*  */}
 
       {/*  */}
-      <div className="container mx-auto   min-h-screen py-5">
+      <div className="   min-h-screen py-5">
         <div className="px-[100px] relative flex  gap-[24px] ">
           {/*  */}
           {activeShare ? (
@@ -247,16 +319,16 @@ function App() {
                   <div className={`bg-white ml-[14px] text-[#021D4F] text-[25px] flex justify-center items-center rounded-full w-[44px] h-[44px]`}>
                     <MdOutlineScience  />{" "}
                   </div>
-                  <div className="ml-5 ">
+                  <div className="ml-[14px] ">
                     <h4
                       className={`text-[16px] font-medium flex items-center  gap-2 poppins-thin   ${
                         theme === "light" ? "text-[#222222]" : "text-[#FFFFFF]"
                       } `}
                     >
-                      Science Lab Report <IoTimerOutline className="text-yellow-600"/>
+                      Science Lab Report <img src={yellow} alt="" />
                     </h4>
                     <p
-                      className={`text-[14px] poppins-thin ${
+                      className={`text-[14px] w-[235px] poppins-thin ${
                         theme === "light" ? "text-black" : "text-white"
                       } `}
                     >
@@ -264,16 +336,16 @@ function App() {
                     </p>
                   </div>
                   <div
-                    className={`flex ml-10 text-[19px] text-[#b88539] ${
+                    className={`flex text-[19px] text-[#b88539] ${
                       theme === "light" ? "text-black" : "text-white"
                     } items-center  `}
                   >
-                    <BsCoin   />
+                    <img src={coin} alt="" />
                     <h1 className={` ${
                       theme === "light" ? "text-[#222222]" : "text-[#FFFFFF] "
-                    } text-[14px] ml-3`}> 1 Coin</h1>
+                    } text-[14px] ml-2`}> 1 Coin</h1>
                   </div>
-                  <div className="ml-[49px]">
+                  <div className="ml-[45px]">
                     <p
                       className={`text-[14px] ml-2  text-[#999999] font-Light`}
                     >
@@ -285,7 +357,7 @@ function App() {
                       11:30PM
                     </p>
                   </div>
-                  <button className="bg-[#FFFFFF] rounded-[8px] ml-[65px] text-black px-[16px] py-[7px]">
+                  <button className="bg-[#FFFFFF] rounded-[8px] ml-[60px] text-black px-[16px] py-[7px]">
                     Details
                   </button>
                 </div>
@@ -296,16 +368,16 @@ function App() {
                   <div className={`bg-white ml-[14px] text-[#021D4F] text-[25px] flex justify-center items-center rounded-full w-[44px] h-[44px]`}>
                     <MdPostAdd  />{" "}
                   </div>
-                  <div className="ml-5">
+                  <div className="ml-[14px]">
                     <h3
                       className={`text-[16px] font-medium flex items-center  gap-2 poppins-thin   ${
                         theme === "light" ? "text-[#222222]" : "text-[#FFFFFF]"
                       } `}
                     >
-                      Write an Essay <IoTimerOutline className="text-green-600"/>
+                      Write an Essay <img src={green} alt="" />
                     </h3>
                     <p
-                      className={`text-[14px] poppins-thin ${
+                      className={`text-[14px] w-[235px]  poppins-thin ${
                         theme === "light" ? "text-black" : "text-white"
                       } `}
                     >
@@ -313,16 +385,16 @@ function App() {
                     </p>
                   </div>
                   <div
-                    className={`flex ml-10 text-[19px] text-[#b88539] ${
+                    className={`flex  text-[19px] text-[#b88539] ${
                       theme === "light" ? "text-black" : "text-white"
                     } items-center  `}
                   >
-                    <BsCoin   />
+                    <img src={coin} alt="" />
                     <h1 className={` ${
                       theme === "light" ? "text-[#222222]" : "text-[#FFFFFF] "
-                    } text-[14px] ml-3`}> 1 Coin</h1>
+                    } text-[14px] ml-2`}> 1 Coin</h1>
                   </div>
-                  <div className="ml-[49px]">
+                  <div className="ml-[45px]">
                     <p
                       className={`text-[14px] ml-2  text-[#999999] font-Light`}
                     >
@@ -334,7 +406,7 @@ function App() {
                       11:30PM
                     </p>
                   </div>
-                  <button className="bg-[#FFFFFF] rounded-[8px] ml-[65px] text-black px-[16px] py-[7px]">
+                  <button className="bg-[#FFFFFF] rounded-[8px] ml-[60px] text-black px-[16px] py-[7px]">
                     Details
                   </button>
                 </div>
@@ -346,16 +418,16 @@ function App() {
                   <div className={`bg-white ml-[14px] text-[#021D4F] text-[25px] flex justify-center items-center rounded-full w-[44px] h-[44px]`}>
                     <IoCalculatorSharp  />{" "}
                   </div>
-                  <div className="ml-5">
+                  <div className="ml-[14px]">
                     <h3
                       className={`text-[16px] font-medium flex items-center  gap-2 poppins-thin   ${
                         theme === "light" ? "text-[#222222]" : "text-[#FFFFFF]"
                       } `}
                     >
-                      Math Problems <IoTimerOutline className="text-yellow-600"/>
+                      Math Problems <img src={yellow} alt="" />
                     </h3>
                     <p
-                      className={`text-[14px] poppins-thin ${
+                      className={`text-[14px] w-[235px]  poppins-thin ${
                         theme === "light" ? "text-black" : "text-white"
                       } `}
                     >
@@ -363,16 +435,16 @@ function App() {
                     </p>
                   </div>
                   <div
-                    className={`flex ml-10 text-[19px] text-[#b88539] ${
+                    className={`flex  text-[19px] text-[#b88539] ${
                       theme === "light" ? "text-black" : "text-white"
                     } items-center  `}
                   >
-                    <BsCoin   />
+                    <img src={coin} alt="" />
                     <h1 className={` ${
                       theme === "light" ? "text-[#222222]" : "text-[#FFFFFF] "
-                    } text-[14px] ml-3`}> 1 Coin</h1>
+                    } text-[14px] ml-2`}> 3 Coin</h1>
                   </div>
-                  <div className="ml-[49px]">
+                  <div className="ml-[45px]">
                     <p
                       className={`text-[14px] ml-2  text-[#999999] font-Light`}
                     >
@@ -384,7 +456,7 @@ function App() {
                       11:30PM
                     </p>
                   </div>
-                  <button className="bg-[#FFFFFF] rounded-[8px] ml-[65px] text-black px-[16px] py-[7px]">
+                  <button className="bg-[#FFFFFF] rounded-[8px] ml-[60px] text-black px-[16px] py-[7px]">
                     Details
                   </button>
                 </div>
@@ -396,16 +468,16 @@ function App() {
                   <div className={`bg-white ml-[14px] text-[#021D4F] text-[25px] flex justify-center items-center rounded-full w-[44px] h-[44px]`}>
                     <IoCalculatorSharp  />{" "}
                   </div>
-                  <div className="ml-5">
+                  <div className="ml-[14px]">
                     <h3
                       className={`text-[16px] font-medium flex items-center  gap-2 poppins-thin   ${
                         theme === "light" ? "text-[#222222]" : "text-[#FFFFFF]"
                       } `}
                     >
-                      Vocabulary Quiz <IoTimerOutline  className="text-yellow-600"/>
+                      Vocabulary Quiz <img src={yellow} alt="" />
                     </h3>
                     <p
-                      className={`text-[14px] poppins-thin ${
+                      className={`text-[14px] w-[235px]  poppins-thin ${
                         theme === "light" ? "text-black" : "text-white"
                       } `}
                     >
@@ -413,16 +485,16 @@ function App() {
                     </p>
                   </div>
                   <div
-                    className={`flex ml-10 text-[19px] text-[#b88539] ${
+                    className={`flex  text-[19px] text-[#b88539] ${
                       theme === "light" ? "text-black" : "text-white"
                     } items-center  `}
                   >
-                    <BsCoin   />
+                    <img src={coin} alt="" />
                     <h1 className={` ${
                       theme === "light" ? "text-[#222222]" : "text-[#FFFFFF] "
-                    } text-[14px] ml-3`}> 1 Coin</h1>
+                    } text-[14px] ml-2`}> 2 Coin</h1>
                   </div>
-                  <div className="ml-[49px]">
+                  <div className="ml-[45px]">
                     <p
                       className={`text-[14px] ml-2  text-[#999999] font-Light`}
                     >
@@ -434,7 +506,7 @@ function App() {
                       11:30PM
                     </p>
                   </div>
-                  <button className="bg-[#FFFFFF] rounded-[8px] ml-[65px] text-black px-[16px] py-[7px]">
+                  <button className="bg-[#FFFFFF] rounded-[8px] ml-[60px] text-black px-[16px] py-[7px]">
                     Details
                   </button>
                 </div>
@@ -447,16 +519,16 @@ function App() {
                   <div className={`bg-white ml-[14px] text-[#021D4F] text-[25px] flex justify-center items-center rounded-full w-[44px] h-[44px]`}>
                     <MdPostAdd  />{" "}
                   </div>
-                  <div className="ml-5">
+                  <div className="ml-[14px]">
                     <h3
                       className={`text-[16px] font-medium flex items-center  gap-2 poppins-thin   ${
                         theme === "light" ? "text-[#222222]" : "text-[#FFFFFF]"
                       } `}
                     >
-                      Science Lab Report <IoTimerOutline className="text-red-600"/>
+                      Science Lab Report <img src={red} alt="" />
                     </h3>
                     <p
-                      className={`text-[14px] poppins-thin ${
+                      className={`text-[14px] w-[235px]  poppins-thin ${
                         theme === "light" ? "text-black" : "text-white"
                       } `}
                     >
@@ -464,16 +536,16 @@ function App() {
                     </p>
                   </div>
                   <div
-                    className={`flex ml-10 text-[19px] text-[#b88539] ${
+                    className={`flex  text-[19px] text-[#b88539] ${
                       theme === "light" ? "text-black" : "text-white"
                     } items-center  `}
                   >
-                    <BsCoin   />
+                    <img src={coin} alt="" />
                     <h1 className={` ${
                       theme === "light" ? "text-[#222222]" : "text-[#FFFFFF] "
-                    } text-[14px] ml-3`}> 1 Coin</h1>
+                    } text-[14px] ml-2`}> 1 Coin</h1>
                   </div>
-                  <div className="ml-[49px]">
+                  <div className="ml-[45px]">
                     <p
                       className={`text-[14px] ml-2  text-[#bd2424] font-Light`}
                     >
@@ -485,7 +557,7 @@ function App() {
                       11:30PM
                     </p>
                   </div>
-                  <button className="bg-[#FFFFFF] rounded-[8px] ml-[65px] text-black px-[16px] py-[7px]">
+                  <button className="bg-[#FFFFFF] rounded-[8px] ml-[60px] text-black px-[16px] py-[7px]">
                     Details
                   </button>
                 </div>
@@ -497,16 +569,16 @@ function App() {
                   <div className={`bg-white ml-[14px] text-[#021D4F] text-[25px] flex justify-center items-center rounded-full w-[44px] h-[44px]`}>
                     <IoLanguage  />{" "}
                   </div>
-                  <div className="ml-5">
+                  <div className="ml-[14px]">
                     <h3
                       className={`text-[16px] font-medium flex items-center  gap-2 poppins-thin   ${
                         theme === "light" ? "text-[#222222]" : "text-[#FFFFFF]"
                       } `}
                     >
-                      Math Problems <IoTimerOutline className="text-green-600"/>
+                      Math Problems <img src={verify} alt="" />
                     </h3>
                     <p
-                      className={`text-[14px] poppins-thin ${
+                      className={`text-[14px] w-[235px]  poppins-thin ${
                         theme === "light" ? "text-black" : "text-white"
                       } `}
                     >
@@ -514,16 +586,16 @@ function App() {
                     </p>
                   </div>
                   <div
-                    className={`flex ml-10 text-[19px] text-[#b88539] ${
+                    className={`flex  text-[19px] text-[#b88539] ${
                       theme === "light" ? "text-black" : "text-white"
                     } items-center  `}
                   >
-                    <BsCoin   />
+                    <img src={coin} alt="" />
                     <h1 className={` ${
                       theme === "light" ? "text-[#222222]" : "text-[#FFFFFF] "
-                    } text-[14px] ml-3`}> 1 Coin</h1>
+                    } text-[14px] ml-2`}> 3 Coin</h1>
                   </div>
-                  <div className="ml-[49px]">
+                  <div className="ml-[45px]">
                     <p
                       className={`text-[14px] ml-2  text-[#43c929] font-Light`}
                     >
@@ -535,7 +607,7 @@ function App() {
                       11:30PM
                     </p>
                   </div>
-                  <button className="bg-[#1D6CFF] rounded-[8px] ml-[35px] text-#FFFFFF px-[16px] py-[7px]">
+                  <button className="bg-[#1D6CFF] rounded-[8px] ml-[30px] text-#FFFFFF px-[16px] py-[7px]">
                   Completed
                   </button>
                 </div>
@@ -547,16 +619,16 @@ function App() {
                   <div className={`bg-white ml-[14px] text-[#021D4F] text-[25px] flex justify-center items-center rounded-full w-[44px] h-[44px]`}>
                     <MdOutlineScience  />{" "}
                   </div>
-                  <div className="ml-5">
+                  <div className="ml-[14px]">
                     <h3
                       className={`text-[16px] font-medium flex items-center  gap-2 poppins-thin   ${
                         theme === "light" ? "text-[#222222]" : "text-[#FFFFFF]"
                       } `}
                     >
-                      Vocabulary Quiz <IoTimerOutline className="text-green-600"/>
+                      Vocabulary Quiz <img src={verify} alt="" />
                     </h3>
                     <p
-                      className={`text-[14px] poppins-thin ${
+                      className={`text-[14px] w-[235px]  poppins-thin ${
                         theme === "light" ? "text-black" : "text-white"
                       } `}
                     >
@@ -564,16 +636,16 @@ function App() {
                     </p>
                   </div>
                   <div
-                    className={`flex ml-10 text-[19px] text-[#b88539] ${
+                    className={`flex  text-[19px] text-[#b88539] ${
                       theme === "light" ? "text-black" : "text-white"
                     } items-center  `}
                   >
-                    <BsCoin   />
+                    <img src={coin} alt="" />
                     <h1 className={` ${
                       theme === "light" ? "text-[#222222]" : "text-[#FFFFFF] "
-                    } text-[14px] ml-3`}> 1 Coin</h1>
+                    } text-[14px] ml-2`}> 2 Coin</h1>
                   </div>
-                  <div className="ml-[49px]">
+                  <div className="ml-[45px]">
                     <p
                       className={`text-[14px] ml-2  text-[#43c929] font-Light`}
                     >
@@ -585,7 +657,7 @@ function App() {
                       11:30PM
                     </p>
                   </div>
-                  <button className="bg-[#1D6CFF] rounded-[8px] ml-[35px] text-#FFFFFF px-[16px] py-[7px]">
+                  <button className="bg-[#1D6CFF] rounded-[8px] ml-[30px] text-#FFFFFF px-[16px] py-[7px]">
                   Completed
                   </button>
                 </div>
@@ -606,8 +678,9 @@ function App() {
                 theme === "light" ? "bg-gray-200" : "bg-gray-900"
               } h-[217px] w-[503px] p-[15px] rounded-xl   `}>
               <div className="flex justify-between items-center">
-                <div className="flex items-center gap-3">
-                  <TbCoinPoundFilled className="text-yellow-400" size={40} />
+                <div className="flex items-center gap-3 relative">
+                  <p className="absolute text-white text-3xl font-bold left-[10px]">1</p>
+                  <img src={notcoin} alt="" />
                   <h1 className="text-[18px] montserrat font-medium">Child progress</h1>
                 </div>
                 <select
@@ -645,14 +718,14 @@ function App() {
 
 
 
-            <div className="py-[14px] px-[51px] bg-gradient-to-br shadow-md shadow-white h-[183px] w-[503px] from-[#28272F] mt-[24px] rounded-[34.61px] to-[#040404]">
+            <div className="py-[14px] px-[51px] bg-gradient-to-br    h-[183px] w-[503px] from-[#28272F] mt-[24px] rounded-[34.61px] to-[#040404]">
               <p className="text-[18px] text-white montserrat font-semibold">Timer</p>
-              <div className="flex items-center justify-center gap-3"> 
+              <div className="flex items-center justify-center gap-5"> 
               <h1 className="text-[76.71px] text-center font-light text-transparent inter bg-clip-text bg-gradient-to-r from-[#EEF1F0] to-[#71757E] mt-[20px]">11</h1>
               <h1 className="text-[76.71px] text-center font-light text-transparent inter bg-clip-text bg-gradient-to-r from-[#EEF1F0] to-[#71757E] mt-[20px]">:</h1>
-              <h1 className="text-[76.71px] text-center font-light text-transparent inter bg-clip-text bg-gradient-to-r from-[#EEF1F0] to-[#71757E] mt-[20px]">58</h1>
+              <h1 className="text-[76.71px] text-center font-light text-transparent inter bg-clip-text bg-gradient-to-r from-[#EEF1F0] to-[#71757E] mt-[20px]">59</h1>
               <h1 className="text-[76.71px] text-center font-light text-transparent inter bg-clip-text bg-gradient-to-r from-[#EEF1F0] to-[#71757E] mt-[20px]">:</h1>
-              <h1 className="text-[76.71px] text-center font-light text-transparent inter bg-clip-text bg-gradient-to-r from-[#EEF1F0] to-[#71757E] mt-[20px]">43</h1>
+              <h1 className="text-[76.71px] text-center font-light text-transparent inter bg-clip-text bg-gradient-to-r from-[#EEF1F0] to-[#71757E] mt-[20px]">50</h1>
               </div>
             </div>
 
@@ -672,7 +745,7 @@ function App() {
               <div className="bg-black p-[22px]    rounded-[16px] h-full bg-opacity-70">
                 <div className="flex justify-between items-center text-white">
                   <div className="flex items-center gap-3">
-                    <TbCoinPoundFilled className="text-yellow-400" size={34} />
+                    <img src={teracoin} alt="" />
                     <h1 className="text-[26px] montserrat font-bold ">24</h1>
                   </div>
                   <p className="text-[16px] font-light poppins-thin text-[#FFFFFF] ">Points history</p>
