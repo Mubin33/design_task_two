@@ -1,0 +1,79 @@
+[
+    {
+        "img": "lab",
+        "id": 1,
+        "title": "Science Lab Report",
+        "description": "Write a 500-word report on a recent lab experiment conducted. Write a 500-word essay on the topic of climate change. Your essay should include an introduction, three body paragraphs (discussing causes, effects, and solutions), and a conclusion.",
+        "coin": "1",
+        "status": "yellow",
+        "date": "02-28",
+        "time": "11:30PM",
+        "button": "Details"
+    },
+    {
+        "img": "language",
+        "id": 2,
+        "title": "Write an Essay",
+        "description": "Write a 500-word essay on the topic of climate change, including introduction, causes, effects, solutions, and conclusion.",
+        "coin": "1",
+        "status": "green",
+        "date": "02-28",
+        "time": "11:30PM",
+        "button": "Details"
+    },
+    {
+        "img": "calculator",
+        "id": 3,
+        "title": "Math Problems",
+        "description": "Solve algebra problems 1–5 on linear equations and inequalities. Write a 500-word essay on the topic of climate change. Your essay should include an introduction, three body paragraphs (discussing causes, effects, and solutions), and a conclusion.",
+        "coin": "3",
+        "status": "yellow",
+        "date": "02-28",
+        "time": "11:30PM",
+        "button": "Details"
+    },
+    {
+        "img": "language",
+        "id": 4,
+        "title": "Vocabulary Quiz",
+        "description": "Study new vocabulary words and take a quiz to test your knowledge. Write a 500-word essay on the topic of climate change. Your essay should include an introduction, three body paragraphs (discussing causes, effects, and solutions), and a conclusion.",
+        "coin": "2",
+        "status": "yellow",
+        "date": "02-28",
+        "time": "11:30PM",
+        "button": "Details"
+    },
+    {
+        "img": "lab",
+        "id": 5,
+        "title": "Science Lab Report",
+        "description": "Write a lab report for the experiment conducted last week. Write a 500-word essay on the topic of climate change. Your essay should include an introduction, three body paragraphs (discussing causes, effects, and solutions), and a conclusion.",
+        "coin": "1",
+        "status": "red",
+        "date": "02-28",
+        "time": "11:30PM",
+        "button": "Details"
+    },
+    {
+        "img": "calculator",
+        "id": 6,
+        "title": "Math Problems",
+        "description": "Solve advanced algebra problems on quadratic equations. Write a 500-word essay on the topic of climate change. Your essay should include an introduction, three body paragraphs (discussing causes, effects, and solutions), and a conclusion.",
+        "coin": "3",
+        "status": "ok",
+        "date": "02-28",
+        "time": "11:30PM",
+        "button": "Completed"
+    },
+    {
+        "img": "language",
+        "id": 7,
+        "title": "Vocabulary Quiz",
+        "description": "Study and take a vocabulary quiz to test your learning progress. Write a 500-word essay on the topic of climate change. Your essay should include an introduction, three body paragraphs (discussing causes, effects, and solutions), and a conclusion.",
+        "coin": "2",
+        "status": "ok",
+        "date": "02-28",
+        "time": "11:30PM",
+        "button": "Completed"
+    }
+]
