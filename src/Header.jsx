@@ -1,44 +1,23 @@
-import { BsCoin } from "react-icons/bs";
-import { MdOutlineScience } from "react-icons/md";
-import { IoTimerOutline } from "react-icons/io5";
-import { MdPostAdd } from "react-icons/md";
-import { IoCalculatorSharp } from "react-icons/io5";
-import { IoLanguage } from "react-icons/io5";
-import { TbCoinPoundFilled } from "react-icons/tb";
-import { useEffect, useState } from "react";
 import notred from "./assets/notred.png";
 import notcoin from "./assets/notcoin.png";
-import teracoin from "./assets/teracoin.png";
-import yellow from "./assets/yellow.png";
-import green from "./assets/green.png";
-import massage from "./assets/massage.png"; 
-import notification from "./assets/notification.png";  
-import whitenoti from "./assets/whitenoti.png";  
-import red from "./assets/red.png";
+import massage from "./assets/massage.png";
+import notification from "./assets/notification.png";
+import whitenoti from "./assets/whitenoti.png";
 import verify from "./assets/verify.png";
-import img from "./assets/ppp.jpg";
-import coin from "./assets/coin.png";
 import avatar from "./assets/avatar.png";
 import logo from "./assets/logo.png";
 import blacklogo from "./assets/blacklogo.png";
-import { IoMdShare } from "react-icons/io";
-import { FaHome } from "react-icons/fa";
-import { IoIosNotifications } from "react-icons/io";
-import { FaTasks } from "react-icons/fa";
 import { GiRank3 } from "react-icons/gi";
 import { CgProfile } from "react-icons/cg";
-import { FaArrowLeft } from "react-icons/fa";
-import { MdCable } from "react-icons/md";
 import { IoIosArrowDown } from "react-icons/io";
 import "./app.css";
 import { TbLogout } from "react-icons/tb";
 import { IoMoonOutline } from "react-icons/io5";
 import { IoMoonSharp } from "react-icons/io5";
 
-
 const Header = ({ theme, toggleTheme }) => {
   return (
-    <div >
+    <div>
       <div
         className={`border-b-2 border-gray-400 ${
           theme === "light" ? "bg-white" : "bg-black"
@@ -66,8 +45,8 @@ const Header = ({ theme, toggleTheme }) => {
                 viewBox="0 0 24 24"
                 strokeWidth="1"
               >
-                <IoMoonSharp className="text-sky-400 mt-4" size={20}/>
-                  </svg>
+                <IoMoonSharp className="text-sky-400 mt-4" size={20} />
+              </svg>
 
               <svg
                 className="swap-on h-[48px] w-[48px] fill-current"
@@ -75,11 +54,9 @@ const Header = ({ theme, toggleTheme }) => {
                 viewBox="0 0 24 24"
                 strokeWidth="1"
               >
-                <IoMoonOutline className="  mt-4" size={20}/>
-                </svg>
+                <IoMoonOutline className="  mt-4" size={20} />
+              </svg>
             </label>
-
-
 
             <div className="indicator  ml-[60px] ">
               <img src={massage} alt="" />
@@ -89,8 +66,10 @@ const Header = ({ theme, toggleTheme }) => {
               <div tabIndex={0} role="button" className="  ">
                 <button className="btn btn-ghost btn-circle">
                   <div className="indicator">
-                  <img src={theme === 'light' ? notification : whitenoti} alt="notification" />
-
+                    <img
+                      src={theme === "light" ? notification : whitenoti}
+                      alt="notification"
+                    />
                   </div>
                 </button>
               </div>
@@ -158,13 +137,15 @@ const Header = ({ theme, toggleTheme }) => {
               </ul>
             </div>
 
-            
-
             <div className="dropdown dropdown-end">
               <div
                 tabIndex={0}
                 role="button"
-                className={`  w-[102px] h-[48px] flex justify-start  items-center gap-4 ${theme === 'light'? 'bg-slate-50':'border-[#868686] border-[1px] '}  rounded-[35px]`}
+                className={`  w-[102px] h-[48px] flex justify-start  items-center gap-4 ${
+                  theme === "light"
+                    ? "bg-slate-50"
+                    : "border-[#868686] border-[1px] "
+                }  rounded-[35px]`}
               >
                 <div className="h-full  ">
                   <img
@@ -181,17 +162,17 @@ const Header = ({ theme, toggleTheme }) => {
               >
                 <li>
                   <a className="text-[14px] poppins-thin font-light">
-                    <CgProfile className="text-blue-500"/> Profile
+                    <CgProfile className="text-blue-500" /> Profile
                   </a>
                 </li>
                 <li>
                   <a className="text-[14px] poppins-thin font-light">
-                    <GiRank3 className="text-blue-500"/> Rank
+                    <GiRank3 className="text-blue-500" /> Rank
                   </a>
                 </li>
                 <li>
                   <a className="text-[14px] poppins-thin font-light">
-                    <TbLogout className="text-red-500"/> Logout
+                    <TbLogout className="text-red-500" /> Logout
                   </a>
                 </li>
               </ul>

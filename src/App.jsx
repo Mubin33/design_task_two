@@ -1,34 +1,7 @@
-import { BsCoin } from "react-icons/bs";
-import { MdOutlineScience } from "react-icons/md";
-import { IoTimerOutline } from "react-icons/io5";
-import { MdPostAdd } from "react-icons/md";
-import { IoCalculatorSharp } from "react-icons/io5";
-import { IoLanguage } from "react-icons/io5";
-import { TbCoinPoundFilled } from "react-icons/tb";
-import { useEffect, useState } from "react";
-import notred from "./assets/notred.png";
-import notcoin from "./assets/notcoin.png";
-import teracoin from "./assets/teracoin.png";
-import yellow from "./assets/yellow.png";
-import green from "./assets/green.png";
-import red from "./assets/red.png";
-import verify from "./assets/verify.png";
-import img from "./assets/ppp.jpg";
-import coin from "./assets/coin.png";
-import avatar from "./assets/avatar.png";
-import logo from "./assets/logo.png";
-import blacklogo from "./assets/blacklogo.png";
-import { IoMdShare } from "react-icons/io";
-import { FaHome } from "react-icons/fa";
-import { IoIosNotifications } from "react-icons/io";
-import { FaTasks } from "react-icons/fa";
-import { GiRank3 } from "react-icons/gi";
-import { CgProfile } from "react-icons/cg";
-import { FaArrowLeft } from "react-icons/fa";
-import { MdCable } from "react-icons/md";
-import { IoIosArrowDown } from "react-icons/io";
-import "./app.css";
-import { TbLogout } from "react-icons/tb";
+ 
+import { useEffect, useState } from "react"; 
+import { MdCable } from "react-icons/md"; 
+import "./app.css"; 
 import Header from "./Header";
 import Intro from "./Intro";
 import TaskProsess from "./TaskProsess";
@@ -58,10 +31,6 @@ function App() {
           theme === "light" ? "bg-white" : "bg-black"
         } mx-auto w-[1440px] `}
       >
-        {/* nav */}
-        {/*  */}
-
-        {/*  */}
         <Intro theme={theme} />
 
         {/*  */}
@@ -70,12 +39,13 @@ function App() {
         <div className="   min-h-screen py-5">
           <div className="lg:px-[100px] relative md:flex   ">
             {/*  */}
-            
-            <SideBar activeShare={activeShare} setActiveShare={setActiveShare}/>
 
-            {/*  */}
-            {/*  */}
-            
+            <SideBar
+              activeShare={activeShare}
+              setActiveShare={setActiveShare}
+            />
+ 
+
             <div className=" ">
               <div
                 className={`px-[26px]    pb-[24px] w-[713px] text-white  ${
@@ -95,9 +65,8 @@ function App() {
                   </h1>
                 </div>
                 <div>
-                <Data theme={theme} />
-                   {/* */}
-                  
+                  <Data theme={theme} />
+                  {/* */}
                 </div>
               </div>
             </div>
