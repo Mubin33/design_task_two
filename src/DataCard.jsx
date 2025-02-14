@@ -1,8 +1,12 @@
  
 import { useEffect, useState } from "react"; 
+import yellow from "./assets/yellow.png";
+import green from "./assets/green.png";
+import red from "./assets/red.png";
 import lab from "./assets/lab.png";
 import calculetor from "./assets/calculetor.png";
-import language from "./assets/language.png"; 
+import language from "./assets/language.png";
+import verify from "./assets/verify.png"; 
 import ccoin from "./assets/coin.png"; 
 import "./app.css"; 
 
@@ -43,7 +47,10 @@ const DataCard = ({ item, theme }) => {
               theme === "light" ? "text-[#222222]" : "text-[#FFFFFF]"
             }`}
           >
-            {title}
+            {title} {status === "green" && <img src={green} alt="" />}
+            {status === "red" && <img src={red} alt="" />}
+            {status === "yellow" && <img src={yellow} alt="" />}
+            {status === "ok" && <img src={verify} alt="" />}
           </h4>
         </div>
 
@@ -80,7 +87,7 @@ const DataCard = ({ item, theme }) => {
                 theme === "light" ? "text-black" : "text-white"
               }`}
             >
-              {truncateText(description, 3)}
+              {truncateText(description, 4)}
             </p>
 
            
